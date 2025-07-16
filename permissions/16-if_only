@@ -1,4 +1,5 @@
 #!/bin/bash
+owner=$(stat -c %U hello 2>/dev/null)
 if [ "$(stat -c %U hello)" = "guillaume" ]; then
     chown vincent hello
 fi
